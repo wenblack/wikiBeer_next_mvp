@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     colors: {
       bgSecondary: '#00111A',
-      bgPrimary: '#000A0F',
+      bgPrimary: '#fafafa',
       textWhite: '#fff',
-      redButton: '#92000E',
+      redButton: '#f97316',
       priceBlue: '#82F3FF',
       placeHolder: '#7C7C8A',
-      title: '#E1E1E6',
+      title: '#fb923c',
       descriptionField: '#C4C4CC',
       textFooter: '#FFFAF1',
-      bgForm: '#0D1D25',
-      bgContentForm: '#001119',
+      bgForm: '#transparent',
+      bgContentForm: '#fffff',
       white: '#FFF',
       transparent: 'transparent'
     },
