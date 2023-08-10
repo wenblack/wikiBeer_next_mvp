@@ -2,7 +2,6 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Roboto_Flex } from 'next/font/google'
 import { CategorieList } from '@/components/CategorieList'
-import { HeroSection } from '@/components/HeroSection'
 import { Auth } from '@/middlewares/Auth'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -15,7 +14,6 @@ export default function Home() {
         <Header></Header>
       </header>
       <main className='flex flex-col overflow-x-hidden  w-screen mt-32 '>
-        <HeroSection></HeroSection>
         <CategorieList id='main'></CategorieList>
         <CategorieList id='candies'></CategorieList>
         <CategorieList id='drinks'></CategorieList>

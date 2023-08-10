@@ -2,12 +2,12 @@ import { Logo } from '@/components/Logo'
 import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import { Input } from '@/components/Input'
-import { Heading } from '@/components/Heading'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useAuth } from '@/hooks/UserContext'
 import { useRouter } from 'next/router'
+import Alert from  'sweetalert2'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500'] })
@@ -30,17 +30,43 @@ export default function Login() {
     const defaultPassword = 'user'
 
     if (user === 'admin' && password === 'admin') {
-      alert(`Bem-vindo de volta Administrador !`)
+        Alert.fire({
+          icon: 'success',
+          title: 'Bem-vindo de volta Administrador ',
+          showConfirmButton: false,
+          timer: 1000
+        })
     } else if (user === '') {
-      alert('Por favor preencha ambos os campos')
-      return
+      Alert.fire({
+        icon: 'warning',
+        title: 'Ops! Ocorreu um erro',
+        text:'Por favor preencha ambos os campos',
+        showConfirmButton: false,
+        timer: 1500
+      })
     } else if (password === '') {
-      alert('Por favor preencha ambos os campos')
-      return
+      Alert.fire({
+        icon: 'warning',
+        title: 'Ops! Ocorreu um erro',
+        text:'Por favor preencha ambos os campos',
+        showConfirmButton: false,
+        timer: 1500
+      })
     } else if (password === defaultPassword) {
-      alert(`Bem-vindo de volta ${user} !`)
+      Alert.fire({
+        icon: 'success',
+        title: `Bem vindo de volta ${user}`,
+        showConfirmButton: false,
+        timer: 1000
+      })
     } else {
-      alert("usuário ou senha incorretos")
+      Alert.fire({
+        icon: 'warning',
+        title: 'Ops! Ocorreu um erro',
+        text:'Usuário e/ou senha incorretos',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
 
   }
@@ -64,10 +90,6 @@ export default function Login() {
       console.log(sessionStorage.getItem('logged'))
       router.push('/dashboard')
     }
-
-    console.log(`User connected: ${state.logged}
-Admin connected: ${state.admin}
-    `)
 
   }
 

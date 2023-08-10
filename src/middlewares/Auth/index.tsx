@@ -16,12 +16,9 @@ export  function Auth({children}:props) {
      
     if(result === 'true'){
       setisLogged(true)
-      console.log('LocalStorage é '+result)
     }else if (result === null){
       setDisconnected(true)
-      console.log('LocalStorage é '+result)
     } else{
-      console.log('LocalStorage é '+result)
     }
 
   })
