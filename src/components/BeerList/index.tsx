@@ -48,81 +48,82 @@ export function BeerList({ id, categorie }: CategorieListProps) {
                     name="Heineken"
                     ratings={[5]} 
                     category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    imgUrl="./files/beers/heineken.png" 
                 />
             </li>
             <li>
                 <Beer
-                    name="Heineken"
+                    name="Eisenbahn"
                     ratings={[4, 4, 3, 5, 4]} 
-                    category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    category="Lager"
+                    imgUrl="./files/beers/eisenbahn.png" 
                 />
             </li>
             <li>
                 <Beer
-                    name="Heineken"
+                    name="Eisenbahn"
                     ratings={[4, 4, 3, 5, 4]} 
+                    category="IPA"
+                    imgUrl="./files/beers/eisenbahn_ipa.png" 
+                />
+            </li>
+            <li>
+               <Beer
+                    name="Heineken Zero"
+                    ratings={[5]} 
                     category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    imgUrl="./files/beers/heineken-00.png" 
                 />
             </li>
             <li>
                 <Beer
-                    name="Heineken"
+                    name="Eisenbahn"
                     ratings={[4, 4, 3, 5, 4]} 
+                    category="Session IPA"
+                    imgUrl="./files/beers/eisenbahn-session-ipa.png" 
+                />
+            </li>
+            <li >
+                <Beer
+                    name="Heineken"
+                    ratings={[5]} 
                     category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    imgUrl="./files/beers/heineken.png" 
                 />
             </li>
             <li>
                 <Beer
-                    name="Heineken"
+                    name="Eisenbahn"
                     ratings={[4, 4, 3, 5, 4]} 
-                    category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    category="Lager"
+                    imgUrl="./files/beers/eisenbahn.png" 
                 />
             </li>
             <li>
                 <Beer
-                    name="Heineken"
+                    name="Eisenbahn"
                     ratings={[4, 4, 3, 5, 4]} 
+                    category="IPA"
+                    imgUrl="./files/beers/eisenbahn_ipa.png" 
+                />
+            </li>
+            <li>
+               <Beer
+                    name="Heineken Zero"
+                    ratings={[5]} 
                     category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    imgUrl="./files/beers/heineken-00.png" 
                 />
             </li>
             <li>
                 <Beer
-                    name="Heineken"
+                    name="Eisenbahn"
                     ratings={[4, 4, 3, 5, 4]} 
-                    category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
+                    category="Session IPA"
+                    imgUrl="./files/beers/eisenbahn-session-ipa.png" 
                 />
             </li>
-            <li>
-                <Beer
-                    name="Heineken"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Heineken"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Heineken"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="Premium Lager"
-                    imgUrl="https://via.placeholder.com/150x180" 
-                />
-            </li>
+        
         </ul>
         <button onClick={scrollLeft} 
         className='absolute right-0 h-8 rounded-full sm:flex items-center px-2 self-center hover:opacity-100 text-white   bg-redButton opacity-60 '
