@@ -41,11 +41,11 @@ export const Beer = ({ name, ratings, category, imgUrl }:CardProps) => {
   };
 
   return (
-    <div className=" bg-white  hover:cursor-pointer mr-4 shadow-md hover:opacity-70 shadow-slate-400 rounded-lg p-4 w-40">
+    <div className=" bg-white  hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-slate-400 rounded-lg p-4 w-40">
       <img
         src={imgUrl}
         alt={`${name} Product`}
-        className="h-32 flex object-cover m-auto  w-28 rounded-md "
+        className="h-32 flex  object-cover m-auto  w-28 rounded-md "
       />
       <div className="mt-2">
           <h3 className=" text-slate-700 font-semibold">{name}</h3>

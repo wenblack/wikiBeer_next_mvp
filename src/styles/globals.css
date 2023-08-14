@@ -32,6 +32,9 @@
   border: 3px solid var(--primary);
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 @layer utilities {
   @variants responsive {
