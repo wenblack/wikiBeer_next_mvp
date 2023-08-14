@@ -11,7 +11,7 @@ interface titleProps {
 export function Heading({ h1, value }: titleProps) {
     if (h1) {
         return (
-            <h1 className={`font-medium   text-bgSecondary text-3xl ${poppins.className} `}>
+            <h1 className={`font-medium   text-slate-700 text-2xl ${poppins.className} `}>
                 {value}
             </h1>
         )

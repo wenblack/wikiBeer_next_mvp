@@ -5,11 +5,12 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 const beers = [
   {
     name: "Heineken",
-    family: "Pale Lager",
+    category: "Pale Lager",
     rating: 4.2,
     shortdescription: "A well-known Dutch lager",
     history: "First brewed in 1873 in the Netherlands, Heineken has become one of the most popular and recognizable beer brands worldwide.",
     imageUrl: "https://example.com/heineken.jpg",
+    ratings:[5, 4, 4, 5, 4] ,
     reviews: [
       {
         username: "BeerLover123",
@@ -25,11 +26,12 @@ const beers = [
   },
   {
     name: "La Fin du Monde",
-    family: "Tripel",
+    category: "Tripel",
     rating: 4.7,
     shortdescription: "A Canadian abbey-style ale",
     history: "Brewed by Unibroue in Quebec, Canada, La Fin du Monde (The End of the World) is a strong and flavorful tripel inspired by the brewing traditions of Belgian abbeys.",
     imageUrl: "https://example.com/la_fin_du_monde.jpg",
+    ratings:[4, 4, 3, 5, 4],
     reviews: [
       {
         username: "TripelTaster",
@@ -45,29 +47,32 @@ const beers = [
   },
   {
     name: "Stella Artois",
-    family: "Pale Lager",
+    category: "Pale Lager",
     rating: 4.0,
     shortdescription: "A Belgian pilsner lager",
     history: "Brewed since 1926 in Leuven, Belgium, Stella Artois is a crisp and classic pilsner lager.",
     imageUrl: "https://example.com/stella_artois.jpg",
+    ratings:[4, 4, 4, 5, 4],
     reviews: []
   },
   {
     name: "Founders KBS",
-    family: "Imperial Stout",
+    category: "Imperial Stout",
     rating: 4.8,
     shortdescription: "A bold and rich bourbon barrel-aged stout",
     history: "First released by Founders Brewing Co. in 2003, Kentucky Breakfast Stout (KBS) is highly sought after for its intense flavors and aging potential.",
     imageUrl: "https://example.com/founders_kbs.jpg",
+    ratings:[4, 3, 4, 4, 4],
     reviews: []
   },
   {
     name: "Birra Moretti",
-    family: "Pale Lager",
+    category: "Pale Lager",
     rating: 4.3,
     shortdescription: "An Italian lager with a balanced taste",
     history: "Birra Moretti has been brewed since 1859 in Udine, Italy, and has gained popularity worldwide for its smooth and easy-drinking profile.",
     imageUrl: "https://example.com/birra_moretti.jpg",
+    ratings:[4,3,3 ,4, 5, 4],
     reviews: []
   },
 ];
