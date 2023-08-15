@@ -13,7 +13,8 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--secondary) var(--primary);
-  
+  margin:0px;
+  padding:0px;
 }
 
 /* Chrome, Edge, and Safari */

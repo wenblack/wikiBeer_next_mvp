@@ -3,6 +3,7 @@ import { Roboto_Flex } from 'next/font/google'
 import { Auth } from '@/middlewares/Auth'
 import { BeerList } from '@/components/BeerList'
 import { CategorieBox } from '@/components/CategorieBox'
+import { NavBar } from '@/components/NavBar'
 
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -14,16 +15,20 @@ export default function Home() {
       <header className=' flex top-0   text-white '>
         <Header></Header>
       </header>
-      <main className='flex flex-col overflow-x-hidden  w-screen mt-24 sm:mt-32'>
-      <section className='grid m-auto gap-4 mb-8 grid-cols-2 sm:grid-cols-3 '>
-        <CategorieBox name='Weiss'/>
-        <CategorieBox name='Lager'/>
-        <CategorieBox name='IPA'/>
+      <main className='flex flex-col overflow-x-hidden  w-screen mt-24 sm:mt-28'>
+      <section className='grid m-auto gap-4 lg:gap-8 mb-8 grid-cols-2 sm:grid-cols-4 '>
+        <CategorieBox name='Weiss / WitBier'/>
+        <CategorieBox name='Lager / Pilsen'/>
+        <CategorieBox name='Pale Ale / IPA'/>
+        <CategorieBox name='Ranking'/>
       </section>
-        <BeerList  categorie='Tradicionais' id='main'></BeerList>
-        <BeerList categorie='Pale Ale' id='candies'></BeerList>
-        <BeerList categorie='Cervejas de Trigo' id='drinks'></BeerList>
+        <BeerList  categorie='Novidades' id='new'></BeerList>
+        <BeerList categorie='Recomendação' id='candies'></BeerList>
+        <BeerList categorie='Mais votadas' id='drinks'></BeerList>
       </main>
+      <footer className='mt-16'>
+        <NavBar></NavBar>
+      </footer>
       
     </div>
     </Auth>
