@@ -12,6 +12,8 @@
 
 
 <p align="center">
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b6b2b23-0eef-4e44-8df0-02c3dae8d1d7/deploy-status)](https://app.netlify.com/sites/wiki-beer/deploys)
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wenblack/food-explorer-next-tailwind-ts">
   <a href="https://www.linkedin.com/in/wenblack/">
     <img alt="Made by" src="https://img.shields.io/badge/made%20by-Wender%20Barbosa-gree">
@@ -23,7 +25,9 @@
   <a href="https://github.com/wenblack/food-explorer-next-tailwind-ts/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/wenblack/food-explorer-next-tailwind-ts">
   </a>
-  <img alt="GitHub" src="https://img.shields.io/github/license/wenblack/food-explorer-next-tailwind-ts">
+  <img alt="GitHub" src="https://img.shields.io/github/license/wenblack/food-explorer-next-tailwind-ts"> 
+
+
 </p>
 
 <p align="center">
