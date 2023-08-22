@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "lib": [
       "dom",
       "dom.iterable",
@@ -29,7 +31,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/_document.jsx"
+    "src/pages/_document.jsx",
+    "src/pages/_document.js"
   ],
   "exclude": [
     "node_modules"
