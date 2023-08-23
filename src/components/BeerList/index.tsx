@@ -38,7 +38,7 @@ export function BeerList({ id, categorie }: CategorieListProps) {
       <div className='flex w-screen  h-full'>
         <button
           onClick={scrollRight}
-          className='h-8 lef-0 absolute rounded-full sm:flex items-center px-2 self-center text-white hover:opacity-100  bg-redButton opacity-60 '
+          className='h-8 lef-0 absolute rounded-full sm:flex items-center px-2 self-center text-white hover:opacity-100  bg-button opacity-60 '
         >
           <Image src={leftIcon} alt="Arrow left Icon" />
         </button>
@@ -126,7 +126,7 @@ export function BeerList({ id, categorie }: CategorieListProps) {
         
         </ul>
         <button onClick={scrollLeft} 
-        className='absolute right-0 h-8 rounded-full sm:flex items-center px-2 self-center hover:opacity-100 text-white   bg-redButton opacity-60 '
+        className='absolute right-0 h-8 rounded-full sm:flex items-center px-2 self-center hover:opacity-100 text-white   bg-button opacity-60 '
         >
           <Image src={rightIcon} alt="Arrow right Icon" />
         </button>

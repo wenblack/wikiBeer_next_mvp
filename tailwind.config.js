@@ -7,14 +7,13 @@ module.exports = {
   ],
   
   theme: 
-  
-  {extend:{
+
+  {
     colors: {
       bgSecondary: '#00111A',
       bgPrimary: '#fafafa',
       textWhite: '#fff',
-      redButton: '#f97316',
-      priceBlue: '#82F3FF',
+      button: '#f97316',
       placeHolder: '#7C7C8A',
       title: '#fb923c',
       descriptionField: '#C4C4CC',
@@ -22,9 +21,11 @@ module.exports = {
       bgForm: '#transparent',
       bgContentForm: '#fffff',
       white: '#FFF',
-      transparent: 'transparent'
+      transparent: 'transparent',
+      yellowStar:"#eab308",
+      gray:"#334155",
+      shadow:"#94a3b8"
     },
-  }
   },
   plugins: [],
 }

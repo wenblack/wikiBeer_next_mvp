@@ -20,7 +20,7 @@ export function NavBar() {
 
     if(activeTab==='home'){
         return(
-            <span className=' flex items-center justify-around fixed z-50 bg-redButton w-screen bottom-0 h-[60px]'>
+            <span className=' flex items-center justify-around fixed z-50 bg-button w-screen bottom-0 h-[60px]'>
             <button type='button'   onClick={()=>updateActiveTab('home')} className='hover:opacity-70'>
                 <IoHome size={30} color='white' />
             </button>
@@ -38,7 +38,7 @@ export function NavBar() {
     }
     if(activeTab==='ranking'){
         return(
-            <span className=' flex items-center justify-around fixed z-50 bg-redButton w-screen bottom-0 h-[60px]'>
+            <span className=' flex items-center justify-around fixed z-50 bg-button w-screen bottom-0 h-[60px]'>
             <button type='button'   onClick={()=>updateActiveTab('home')} className='hover:opacity-100 opacity-70 '>
                 <IoHomeOutline size={30} color='white' />
             </button>
@@ -56,7 +56,7 @@ export function NavBar() {
     }
     if(activeTab==='search'){
         return(
-            <span className=' flex items-center justify-around fixed z-50 bg-redButton w-screen bottom-0 h-[60px]'>
+            <span className=' flex items-center justify-around fixed z-50 bg-button w-screen bottom-0 h-[60px]'>
             <button type='button'   onClick={()=>updateActiveTab('home')} className='hover:opacity-100 opacity-70 '>
                 <IoHomeOutline size={30} color='white' />
             </button>
@@ -73,7 +73,7 @@ export function NavBar() {
         )
     }
     return (
-        <span className=' flex items-center justify-around fixed z-50 bg-redButton w-screen bottom-0 h-[60px]'>
+        <span className=' flex items-center justify-around fixed z-50 bg-button w-screen bottom-0 h-[60px]'>
             <button type='button'   onClick={()=>updateActiveTab('home')} className='hover:opacity-100 opacity-70'>
                 <IoHomeOutline size={30} color='white' />
             </button>

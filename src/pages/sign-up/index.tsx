@@ -76,7 +76,7 @@ export default function SignUp() {
             <Input type='password' change={getPassword} submit={saveUser} loginForm value='Mínimo 6 caracteres' label='Senha' />
             <Button value='Criar conta' onclick={saveUser} />
           </div>
-          <Link className={`${poppins.className} hover:text-bgSecondary text-redButton  font-medium mt-8`} href={'/'}>Já tenho uma conta</Link>
+          <Link className={`${poppins.className} hover:text-bgSecondary text-button  font-medium mt-8`} href={'/'}>Já tenho uma conta</Link>
         </div>
         {/* Mobile version*/}
         <div className=' flex md:hidden sm:flex  lg:hidden flex-col  items-center justify-center h-[100vh] w-[100vw] sm:min-h-[540px] md:max-w-[476px]  bg-bgContentForm rounded-lg'>
@@ -87,7 +87,7 @@ export default function SignUp() {
             <Input type='password' change={getPassword} submit={saveUser} loginForm value='Mínimo 6 caracteres' label='Senha' />
             <Button value='Criar conta' onclick={saveUser} />
           </div>
-          <Link className={`${poppins.className} hover:text-bgSecondary text-redButton font-medium mt-8`} href={'/'}>Já tenho uma conta</Link>
+          <Link className={`${poppins.className} hover:text-bgSecondary text-button font-medium mt-8`} href={'/'}>Já tenho uma conta</Link>
         </div>
       </div>
     </main>

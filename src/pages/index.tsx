@@ -122,7 +122,7 @@ export default function Login() {
           </div>
           <span className='mt-8 text-bgSecondary '>
             Não tem conta? 
-            <Link className={`${poppins.className} m-2 text-redButton hover:opacity-70  font-medium `} href={'/sign-up'}>Criar uma</Link>
+            <Link className={`${poppins.className} m-2 text-button hover:opacity-70  font-medium `} href={'/sign-up'}>Criar uma</Link>
           </span>
           </div>
         {/* Mobile version*/}
@@ -148,7 +148,7 @@ export default function Login() {
           </div>
           <span className='mt-8 text-bgSecondary '>
             Não tem conta? 
-            <Link className={`${poppins.className} m-2 text-redButton hover:opacity-70  font-medium `} href={'/sign-up'}>Criar uma</Link>
+            <Link className={`${poppins.className} m-2 text-button hover:opacity-70  font-medium `} href={'/sign-up'}>Criar uma</Link>
           </span>
         </div>
       </div>
