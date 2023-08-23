@@ -3,7 +3,6 @@ import { Roboto_Flex } from 'next/font/google'
 import { Auth } from '@/middlewares/Auth'
 import { BeerList } from '@/components/BeerList'
 import { CategorieBox } from '@/components/CategorieBox'
-import { NavBar } from '@/components/NavBar'
 
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -25,11 +24,7 @@ export default function Home() {
         <BeerList  categorie='Novidades' id='new'></BeerList>
         <BeerList categorie='Recomendação' id='candies'></BeerList>
         <BeerList categorie='Mais votadas' id='drinks'></BeerList>
-      </main>
-      <footer className='mt-16'>
-        <NavBar></NavBar>
-      </footer>
-      
+      </main>   
     </div>
     </Auth>
   )
