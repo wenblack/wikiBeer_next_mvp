@@ -71,19 +71,19 @@ export function Header() {
                   <ul>
                     <li >
                       <a className='flex   mt-4 items-center gap-4' href={'/dashboard'}>
-                        <IoHomeOutline size={25} color='white' />
+                        <IoHome size={25} color='white' />
                         Página inicial
                       </a>
                     </li>
                     <li>
                       <a className='flex text-white mt-4 gap-4' href={'/dashboard'} >
-                      <IoTrophyOutline size={25} color='white' />
+                      <IoTrophy size={25} color='white' />
                         Ranking
                       </a>
                     </li>
                     <li>
                     <a className='flex mt-4 gap-4 text-white' href={'/dashboard'} >
-                      <IoPersonCircleOutline size={25} color='white' />
+                      <IoPersonCircle size={25} color='white' />
                         Minha conta
                       </a>
                     </li>
@@ -122,7 +122,7 @@ export function Header() {
                     </li>
                     <li>
                     <a className='flex mt-4 gap-4 text-white' href={'/dashboard'} >
-                      <IoPersonCircleOutline size={25} color='white' />
+                      <IoPersonCircle size={25} color='white' />
                         Minha conta
                       </a>
                     </li>
