@@ -9,7 +9,7 @@ export function Header() {
   
   return (
     <nav
-      className=" justify-between z-10 shadow-lg items-center fixed  top-0 w-screen py-4  bg-textWhite"
+      className=" justify-between z-10 shadow-md items-center fixed  top-0 w-screen py-4  bg-textWhite"
     >
           <div className="px-2  h-full">
             <div className="relative flex h-8 sm:h-12 items-center justify-around">

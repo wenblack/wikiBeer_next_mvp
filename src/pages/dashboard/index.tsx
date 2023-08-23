@@ -12,10 +12,10 @@ export default function Home() {
   return(
     <Auth>
       <div className={` flex overflow-hidden  min-h-[100vh] w-full   flex-col  max-w-screen bg-bgPrimary ${roboto.className}`}>
-      <header className=' flex top-0   text-white '>
+      <header>
         <Header></Header>
       </header>
-      <main className='flex flex-col overflow-x-hidden  w-screen mt-24 sm:mt-28'>
+      <main className='flex flex-col overflow-x-hidden w-screen mt-24 sm:mt-28'>
       <section className='grid m-auto gap-4 lg:gap-8 mb-8 grid-cols-2 sm:grid-cols-4 '>
         <CategorieBox name='Weiss / WitBier'/>
         <CategorieBox name='Lager / Pilsen'/>

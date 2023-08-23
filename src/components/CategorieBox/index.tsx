@@ -7,7 +7,7 @@ export function CategorieBox ({name}:CategorieProps){
             <a  href='#' className=' hover:opacity-80   hidden md:flex bg-button text-white rounded-full font-semibold px-8 h-12 items-center justify-center flex-grow'>
                 <p> {name}</p>
             </a> 
-            <a  href='#' className=' hover:opacity-80   flex md:hidden bg-button text-white rounded-full font-semibold px-4 h-12 items-center justify-center flex-grow'>
+            <a  href='#' className=' hover:opacity-80   flex md:hidden  bg-title text-white rounded-full font-semibold px-4 h-12 items-center justify-center flex-grow'>
                 <p>{name}</p>
             </a>
         </>

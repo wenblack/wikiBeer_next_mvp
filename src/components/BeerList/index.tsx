@@ -78,7 +78,7 @@ export function BeerList({ id, categorie }: CategorieListProps) {
             <li>
                 <Beer
                     name="Eisenbahn"
-                    ratings={[4, 4, 3, 5, 4]} 
+                    ratings={[3]} 
                     category="Session IPA"
                     imgUrl="./files/beers/eisenbahn-session-ipa.png" 
                 />
@@ -86,7 +86,7 @@ export function BeerList({ id, categorie }: CategorieListProps) {
             <li >
                 <Beer
                     name="Heineken"
-                    ratings={[5]} 
+                    ratings={[2]} 
                     category="Premium Lager"
                     imgUrl="./files/beers/heineken.png" 
                 />
