@@ -5,7 +5,7 @@ import rightIcon from '../../assets/svg/CaretRight.svg'
 import Image from "next/image"
 import { UserContext } from "@/hooks/UserContext"
 import { useContext } from "react"
-import { api } from "@/services/api"
+
 
 interface CategorieListProps {
   id: string
