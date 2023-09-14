@@ -5,35 +5,40 @@ import rightIcon from '../../assets/svg/CaretRight.svg'
 import Image from "next/image"
 import { UserContext } from "@/hooks/UserContext"
 import { useContext } from "react"
-
+import { BeerProps } from "@/utils/BeerInterface"
 
 interface CategorieListProps {
-  id: string
-  categorie:string
+  key: string
+  categorieName: string,
+  beers: BeerProps[]
 }
 
-export function BeerList({ id, categorie }: CategorieListProps) {
-    const {state} = useContext(UserContext)
+export function BeerList({
+  key,
+  categorieName,
+  beers
+}: CategorieListProps,
+) {
+  const { state } = useContext(UserContext)
 
   function scrollLeft() {
-      let value = document.getElementById(String(id))
-      if (value) {
-        value.scrollLeft += 116
-      }
+    let value = document.getElementById(key)
+    if (value) {
+      value.scrollLeft += 116
     }
- 
+  }
+
   function scrollRight() {
-    let value = document.getElementById(String(id))
+    let value = document.getElementById(key)
     if (value) {
       value.scrollLeft -= 116
     }
   }
-  
 
   return (
     <section className='flex flex-col  w-full'>
       <span className='flex ml-16 lg:ml-28 w-screen mb-10 '>
-        <Heading h1 value={categorie} />
+        <Heading h1 value={categorieName} />
       </span>
       <div className='flex w-screen  h-full'>
         <button
@@ -42,91 +47,28 @@ export function BeerList({ id, categorie }: CategorieListProps) {
         >
           <Image src={leftIcon} alt="Arrow left Icon" />
         </button>
-        <ul id={id} className='flex hide no-scrollbar pb-4 overflow-scroll ml-16 sm:ml-16 sm:pr-8 md:pr-8 '>
+        <ul id={key} className='flex hide no-scrollbar pb-4 overflow-scroll ml-16 sm:ml-16 sm:pr-8 md:pr-8 '>
+          {beers.map((beer) =>
             <li >
-                <Beer
-                    name="Heineken"
-                    ratings={[5]} 
-                    category="Premium Lager"
-                    imgUrl="./files/beers/heineken.png" 
-                />
+              <Beer
+                name={beer.name}
+                ABV={beer.ABV}
+                IBU={beer.IBU}
+                id={beer.id}
+                imageUrl={beer.imageUrl}
+                rating={beer.rating}
+                Notes={beer.Notes}
+                description={beer.description}
+                reviews={beer.reviews}
+                categorie={beer.categorie}
+                categorieId={beer.categorieId}
+              />
             </li>
-            <li>
-                <Beer
-                    name="Eisenbahn"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="Lager"
-                    imgUrl="./files/beers/eisenbahn.png" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Eisenbahn"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="IPA"
-                    imgUrl="./files/beers/eisenbahn_ipa.png" 
-                />
-            </li>
-            <li>
-               <Beer
-                    name="Heineken Zero"
-                    ratings={[5]} 
-                    category="Premium Lager"
-                    imgUrl="./files/beers/heineken-00.png" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Eisenbahn"
-                    ratings={[3]} 
-                    category="Session IPA"
-                    imgUrl="./files/beers/eisenbahn-session-ipa.png" 
-                />
-            </li>
-            <li >
-                <Beer
-                    name="Heineken"
-                    ratings={[2]} 
-                    category="Premium Lager"
-                    imgUrl="./files/beers/heineken.png" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Eisenbahn"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="Lager"
-                    imgUrl="./files/beers/eisenbahn.png" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Eisenbahn"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="IPA"
-                    imgUrl="./files/beers/eisenbahn_ipa.png" 
-                />
-            </li>
-            <li>
-               <Beer
-                    name="Heineken Zero"
-                    ratings={[5]} 
-                    category="Premium Lager"
-                    imgUrl="./files/beers/heineken-00.png" 
-                />
-            </li>
-            <li>
-                <Beer
-                    name="Eisenbahn"
-                    ratings={[4, 4, 3, 5, 4]} 
-                    category="Session IPA"
-                    imgUrl="./files/beers/eisenbahn-session-ipa.png" 
-                />
-            </li>
-        
+          )}
         </ul>
-        <button onClick={scrollLeft} 
-        className='absolute right-0 h-8 rounded-full sm:flex items-center px-2 self-center hover:opacity-100 text-white   bg-button opacity-60 '
+        <button
+          onClick={scrollLeft}
+          className='absolute right-0 h-8 rounded-full sm:flex items-center px-2 self-center hover:opacity-100 text-white   bg-button opacity-60 '
         >
           <Image src={rightIcon} alt="Arrow right Icon" />
         </button>
