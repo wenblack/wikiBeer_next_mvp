@@ -8,7 +8,6 @@ import { useState } from 'react'
 import { useAuth } from '@/hooks/UserContext'
 import { useRouter } from 'next/router'
 import Alert from 'sweetalert2'
-import { api } from '@/services/api'
 import axios from 'axios'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -80,8 +79,8 @@ export default function Login() {
     validateFields()
 
     async function getData() {
-      let result = await axios.get(`http://localhost:3000/api/auth/${user}/${password}`);
-      console.log(result)
+      let result = await axios.get("/api/beers");
+      console.log(result.data)
     }
 
     getData()
@@ -91,14 +90,12 @@ export default function Login() {
       state.admin = true
       sessionStorage.setItem('logged', 'true')
       sessionStorage.setItem('admin', 'true')
-      console.log(sessionStorage.getItem('logged'))
       router.push('/dashboard')
     }
 
     if (password === 'user') {
       state.logged = true
       sessionStorage.setItem('logged', 'true')
-      console.log(sessionStorage.getItem('logged'))
       router.push('/dashboard')
     }
 
