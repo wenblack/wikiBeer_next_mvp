@@ -1,6 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const beers = [
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+
+  const { name } = req.query
+  let searchParams = String(name);
+  
+  const beers = [
     {
       "id": "clly0rpfm0001mwesa9hmyh6f",
       "name": "heineken",
@@ -79,7 +87,7 @@ const beers = [
         "name": "lager"
       },
       "Notes": [
-        
+
       ]
     },
     {
@@ -93,14 +101,14 @@ const beers = [
       "createdAt": "2023-08-30T18:02:15.859Z",
       "categorieId": "clly1le350005mwesd35p0bh4",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1le350005mwesd35p0bh4",
         "name": "witbier"
       },
       "Notes": [
-        
+
       ]
     },
     {
@@ -114,14 +122,14 @@ const beers = [
       "createdAt": "2023-08-30T18:03:37.253Z",
       "categorieId": "clly1le350005mwesd35p0bh4",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1le350005mwesd35p0bh4",
         "name": "witbier"
       },
       "Notes": [
-        
+
       ]
     },
     {
@@ -135,19 +143,19 @@ const beers = [
       "createdAt": "2023-08-30T18:05:17.959Z",
       "categorieId": "clly1lkd40006mwesjb4l7bf5",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1lkd40006mwesjb4l7bf5",
         "name": "ipa"
       },
       "Notes": [
-        
+
       ]
     },
     {
       "id": "clly1tajk000bmwess07puf07",
-      "name": "Lagunitas",
+      "name": "lagunitas",
       "description": "água,malte e lúpulo",
       "imageUrl": "clly1tajk000bmwess07puf07.png",
       "rating": 5,
@@ -156,14 +164,14 @@ const beers = [
       "createdAt": "2023-08-30T18:06:11.360Z",
       "categorieId": "clly1lkd40006mwesjb4l7bf5",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1lkd40006mwesjb4l7bf5",
         "name": "ipa"
       },
       "Notes": [
-        
+
       ]
     },
     {
@@ -177,14 +185,14 @@ const beers = [
       "createdAt": "2023-08-30T18:06:51.936Z",
       "categorieId": "clly1l1b70004mwesbdgdhhbc",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1l1b70004mwesbdgdhhbc",
         "name": "weiss"
       },
       "Notes": [
-        
+
       ]
     },
     {
@@ -198,14 +206,14 @@ const beers = [
       "createdAt": "2023-08-30T18:07:38.456Z",
       "categorieId": "clly1l1b70004mwesbdgdhhbc",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1l1b70004mwesbdgdhhbc",
         "name": "weiss"
       },
       "Notes": [
-        
+
       ]
     },
     {
@@ -219,23 +227,23 @@ const beers = [
       "createdAt": "2023-08-30T18:09:31.409Z",
       "categorieId": "clly1lq5k0007mwesz3ucq3hv",
       "reviews": [
-        
+
       ],
       "categorie": {
         "id": "clly1lq5k0007mwesz3ucq3hv",
         "name": "pale ale"
       },
       "Notes": [
-        
+
       ]
     }
-];
+  ];
 
+  var result = beers.filter(option => option.name.includes(searchParams));
+  let total = result.length
 
-
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  res.status(200).json({result : beers})
+  if (total === 0) {
+    return res.status(404).json({ result: 'Beer not Found' })
+  }
+  return res.status(200).json({ data: result })
 }
