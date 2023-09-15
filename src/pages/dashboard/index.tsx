@@ -44,9 +44,9 @@ export default function Home() {
             <CategorieBox name='Pale Ale / IPA' />
             <CategorieBox name='Ranking' />
           </section>
-          <BeerList categorieName='ale' beers={dataOne}></BeerList>
-          <BeerList categorieName='weiss' beers={dataTwo}></BeerList>
-          <BeerList categorieName='lager' beers={dataThree}></BeerList>
+          <BeerList categorieName='Cervejas encorpadas' beers={dataOne}></BeerList>
+          <BeerList categorieName='cervejas tradicionais' beers={dataTwo}></BeerList>
+          <BeerList categorieName='Cervejas de trigo' beers={dataThree}></BeerList>
         </main>
       </div>
     </Auth>

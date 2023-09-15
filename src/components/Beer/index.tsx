@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { BeerProps } from '@/utils/BeerInterface'
-import heineken from '@/assets/images/IPA.png'
 import Image from 'next/image';
 
 
@@ -9,7 +8,7 @@ export const Beer = (
 ) => {
   const [avg, setAvg] = useState('')
   const [family, setFamily] = useState('')
-
+  const image = `/files/beers/${id}.png`
 
   function getAvg() {
     let avgStars = rating;
@@ -79,7 +78,9 @@ export const Beer = (
         </div>
         <span className='flex  flex-col items-center justify-center'>
           <Image
-            src={heineken}
+            src={image}
+            width={150}
+            height={150}
             alt={`${name} Product`}
             className="h-32 flex  object-cover m-auto  w-28 rounded-md "
           />
@@ -112,7 +113,9 @@ export const Beer = (
         </div>
         <span className='flex   flex-col items-center justify-center'>
           <Image
-            src={heineken}
+            src={image}
+            width={150}
+            height={150}
             alt={`${name} Product`}
             className="h-32 flex  object-cover m-auto  w-28 rounded-md "
           />
@@ -143,7 +146,9 @@ export const Beer = (
       </div>
       <span className='flex  flex-col items-center justify-center'>
         <Image
-          src={heineken}
+          src={image}
+          width={150}
+          height={150}
           alt={`${name} Product`}
           className="h-32 flex  object-cover m-auto  w-28 rounded-md "
         />
