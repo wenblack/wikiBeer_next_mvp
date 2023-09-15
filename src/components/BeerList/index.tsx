@@ -8,13 +8,11 @@ import { useContext } from "react"
 import { BeerProps } from "@/utils/BeerInterface"
 
 interface CategorieListProps {
-  key: string
   categorieName: string,
   beers: BeerProps[]
 }
 
 export function BeerList({
-  key,
   categorieName,
   beers
 }: CategorieListProps,
@@ -22,14 +20,14 @@ export function BeerList({
   const { state } = useContext(UserContext)
 
   function scrollLeft() {
-    let value = document.getElementById(key)
+    let value = document.getElementById(categorieName)
     if (value) {
       value.scrollLeft += 116
     }
   }
 
   function scrollRight() {
-    let value = document.getElementById(key)
+    let value = document.getElementById(categorieName)
     if (value) {
       value.scrollLeft -= 116
     }
@@ -37,7 +35,7 @@ export function BeerList({
 
   return (
     <section className='flex flex-col  w-full'>
-      <span className='flex ml-16 lg:ml-28 w-screen mb-10 '>
+      <span className='flex ml-16 capitalize lg:ml-28 w-screen mb-10 '>
         <Heading h1 value={categorieName} />
       </span>
       <div className='flex w-screen  h-full'>
@@ -47,9 +45,9 @@ export function BeerList({
         >
           <Image src={leftIcon} alt="Arrow left Icon" />
         </button>
-        <ul id={key} className='flex hide no-scrollbar pb-4 overflow-scroll ml-16 sm:ml-16 sm:pr-8 md:pr-8 '>
+        <ul id={categorieName} className='flex hide no-scrollbar pb-4 overflow-scroll ml-16 sm:ml-16 sm:pr-8 md:pr-8 '>
           {beers.map((beer) =>
-            <li >
+            <li key={beer.id}>
               <Beer
                 name={beer.name}
                 ABV={beer.ABV}
