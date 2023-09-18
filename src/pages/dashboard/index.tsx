@@ -6,7 +6,6 @@ import { CategorieBox } from '@/components/CategorieBox'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 
 export default function Home() {
