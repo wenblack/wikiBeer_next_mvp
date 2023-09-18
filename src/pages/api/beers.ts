@@ -147,7 +147,7 @@ const beers = [
     },
     {
       "id": "clly1tajk000bmwess07puf07",
-      "name": "Lagunitas",
+      "name": "lagunitas",
       "description": "água,malte e lúpulo",
       "imageUrl": "clly1tajk000bmwess07puf07.png",
       "rating": 5,

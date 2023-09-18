@@ -6,6 +6,7 @@ import Image from "next/image"
 import { UserContext } from "@/hooks/UserContext"
 import { useContext } from "react"
 import { BeerProps } from "@/utils/BeerInterface"
+import { useRouter } from "next/router"
 
 interface CategorieListProps {
   categorieName: string,
@@ -18,6 +19,7 @@ export function BeerList({
 }: CategorieListProps,
 ) {
   const { state } = useContext(UserContext)
+  const router = useRouter()
 
   function scrollLeft() {
     let value = document.getElementById(categorieName)
@@ -49,6 +51,7 @@ export function BeerList({
           {beers.map((beer) =>
             <li key={beer.id}>
               <Beer
+                click={() => router.push(`details/${beer.name}`)}
                 name={beer.name}
                 ABV={beer.ABV}
                 IBU={beer.IBU}

@@ -113,7 +113,7 @@ export const BeerDetail = (
           <div className="mt-2  border-t-2 ">
             <span className='flex items-center justify-between'>
               <h3 className=" text-gray capitalize font-semibold">
-                {name.substring(0, 13)} {name.length > 13 ? '...' : ''}
+                {name}
               </h3>
             </span>
             <span className=" px-2 py-1  items-center bg-button text-white font-semibold text-xs rounded-md">
@@ -121,44 +121,66 @@ export const BeerDetail = (
             </span>
           </div>
         </div>
-        <Tabs defaultValue="account" className='max-w-screen-md ' >
-          <TabsList className="grid  grid-cols-2">
+        <Tabs defaultValue="account" className='w-screen-md ' >
+          <TabsList className="grid w-screen max-w-md  grid-cols-2">
             <TabsTrigger value="account">Informações</TabsTrigger>
             <TabsTrigger value="password">Comentários</TabsTrigger>
           </TabsList>
           <TabsContent value="account">
-            <Card>
-              <CardHeader>
-                <CardTitle>Informações</CardTitle>
+            <Card className='grid grid-cols-2 gap-3 p-8 w-screen max-w-md '>
+              <span>
+                <CardTitle>IBU</CardTitle>
                 <CardDescription>
-                  Make changes to your account here. Click save when you're done.
+                  {IBU}
                 </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="space-y-1">
-                  <p>The info about beer</p>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button value='Save'></Button>
-              </CardFooter>
+              </span>
+              <span>
+                <CardTitle>ABV</CardTitle>
+                <CardDescription>
+                  {ABV} %
+                </CardDescription>
+              </span>
+              <span>
+                <CardTitle>Nota</CardTitle>
+                <CardDescription>
+                  {rating}/5
+                </CardDescription>
+              </span>
+              <span>
+                <CardTitle>Família</CardTitle>
+                <CardDescription>
+                  {family}
+                </CardDescription>
+              </span>
+              <span>
+                <CardTitle>Ingredientes</CardTitle>
+                <CardDescription className='capitalize'>
+                  {description}
+                </CardDescription>
+              </span>
+              <span>
+                <CardTitle>Reviews</CardTitle>
+                <CardDescription>
+                  {reviews?.length}
+                </CardDescription>
+              </span>
             </Card>
           </TabsContent>
           <TabsContent value="password">
             <Card>
               <CardHeader>
-                <CardTitle>Comentários</CardTitle>
+                <CardTitle>Sua opinião</CardTitle>
                 <CardDescription>
-                  Change your password here. After saving, you'll be logged out.
+                  Conte-nos o que você achou dessa breja:
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="space-y-1">
-                  <p>That comments about beer</p>
+                  <textarea className='border px-2 w-full border-shadow' rows={5}></textarea>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button value='save'></Button>
+              <CardFooter className='flex w-full items-center justify-center'>
+                <Button type='button' value='Salvar'></Button>
               </CardFooter>
             </Card>
           </TabsContent>

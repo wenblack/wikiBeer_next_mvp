@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { BeerProps } from '@/utils/BeerInterface'
 import Image from 'next/image';
-
+import { useRouter } from 'next/router';
+interface props {
+  click: any
+}
 
 export const Beer = (
-  { name, ABV, IBU, Notes, categorie, categorieId, description, id, imageUrl, rating, reviews }: BeerProps
+  { name, ABV, IBU, Notes, click, categorie, categorieId, description, id, imageUrl, rating, reviews }: BeerProps,
 ) => {
   const [avg, setAvg] = useState('')
   const [family, setFamily] = useState('')
   const image = `/files/beers/${id}.png`
+  const router = useRouter()
 
   function getAvg() {
     let avgStars = rating;
@@ -21,6 +25,7 @@ export const Beer = (
     }
     setCategorie()
   }
+
   function setCategorie() {
     if (categorieId === 'clly0riw70000mwese8gq5ytv') {
       setFamily('Lager')
@@ -70,7 +75,7 @@ export const Beer = (
 
   if (avg === "ÓTIMA") {
     return (
-      <div className=" bg-white hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-shadow rounded-lg p-4 w-40">
+      <div onClick={click} className=" bg-white hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-shadow rounded-lg p-4 w-40">
         <div className='flex justify-end mb-4'>
           <span className='px-2 py-1 flex  rounded-md font-bold text-xs bg-[#15803d] items-center text-white justify-center'>
             {avg}
@@ -105,7 +110,7 @@ export const Beer = (
 
   if (avg === "BOA") {
     return (
-      <div className=" bg-white  hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-shadow rounded-lg p-4 w-40">
+      <div onClick={click} className=" bg-white  hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-shadow rounded-lg p-4 w-40">
         <div className='flex justify-end mb-4'>
           <span className='px-2 py-1 flex  rounded-md font-bold text-xs bg-[#f59e0b] items-center text-white justify-center'>
             {avg}
@@ -138,7 +143,7 @@ export const Beer = (
   }
 
   return (
-    <div className=" bg-white  hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-shadow rounded-lg p-4 w-40">
+    <div onClick={click} className=" bg-white hover:cursor-pointer mr-4 shadow-md hover:animate-pulse shadow-shadow rounded-lg p-4 w-40">
       <div className='flex justify-end mb-4'>
         <span className='px-2 py-1 flex  rounded-md font-bold text-xs bg-[#dc2626] items-center text-white justify-center'>
           {avg}
@@ -159,7 +164,7 @@ export const Beer = (
       <div className="mt-2">
         <span className='flex items-center justify-between'>
           <h3 className=" text-gray capitalize font-semibold">
-            {name.substring(0, 13)} {name.length > 13 ? '...' : ''}
+            {name}
           </h3>
         </span>
         <span className=" px-2 py-1 bg-button text-white font-semibold text-xs rounded-md">
