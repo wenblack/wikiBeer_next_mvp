@@ -184,8 +184,8 @@ export const BeerDetail = (
                 <Button type='submit' value='Salvar'></Button>
               </CardFooter>
               <ul className='flex flex-col gap-2 mt-4 border-t pt-4'>
-                {reviews?.map((review) =>
-                  <li className=' flex '>
+                {reviews?.map((review, index) =>
+                  <li className=' flex ' key={index}>
                     <span className='px-8'>
                       <h3 className='font-semibold'>{review.Title}</h3>
                       <p className='text-muted-foreground'>{review.content}</p>
@@ -285,8 +285,8 @@ export const BeerDetail = (
             </Card>
           </TabsContent>
           <TabsContent value="password">
-            <Card>
-              <CardHeader>
+            <Card className='pb-4'>
+              <CardHeader >
                 <CardTitle>Sua opinião</CardTitle>
                 <CardDescription>
                   Conte-nos o que você achou dessa breja:
@@ -298,8 +298,18 @@ export const BeerDetail = (
                 </div>
               </CardContent>
               <CardFooter className='flex w-full items-center justify-center'>
-                <Button type='button' value='Salvar'></Button>
+                <Button type='submit' value='Salvar'></Button>
               </CardFooter>
+              <ul className='flex flex-col gap-2 mt-4 border-t pt-4'>
+                {reviews?.map((review, index) =>
+                  <li className=' flex ' key={index}>
+                    <span className='px-8'>
+                      <h3 className='font-semibold'>{review.Title}</h3>
+                      <p className='text-muted-foreground'>{review.content}</p>
+                    </span>
+                  </li>
+                )}
+              </ul>
             </Card>
           </TabsContent>
         </Tabs>
@@ -407,8 +417,8 @@ export const BeerDetail = (
               <Button type='submit' value='Salvar'></Button>
             </CardFooter>
             <ul className='flex flex-col gap-2 mt-4 border-t pt-4'>
-              {reviews?.map((review) =>
-                <li className=' flex '>
+              {reviews?.map((review, index) =>
+                <li className=' flex ' key={index}>
                   <span className='px-8'>
                     <h3 className='font-semibold'>{review.Title}</h3>
                     <p className='text-muted-foreground'>{review.content}</p>
