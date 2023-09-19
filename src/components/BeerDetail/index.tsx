@@ -18,6 +18,7 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export const BeerDetail = (
   { name, ABV, IBU, Notes, categorie, categorieId, description, id, imageUrl, rating, reviews }: BeerProps
@@ -25,6 +26,7 @@ export const BeerDetail = (
   const [avg, setAvg] = useState('')
   const [family, setFamily] = useState('')
   const image = `/files/beers/${id}.png`
+  const router = useRouter()
 
   function getAvg() {
     let avgStars = rating;
@@ -86,12 +88,12 @@ export const BeerDetail = (
 
   if (avg === "ÓTIMA") {
     return (
-      <main className='flex flex-col items-center w-screen  justify-center'>
+      <main className='flex flex-col my-20 items-center w-screen  justify-center'>
         <div className=" bg-white  flex flex-col w-full mr-4  rounded-lg p-4 max-w-sm ">
           <div className='flex justify-start '>
-            <Link href='/dashboard' className=' flex  rounded-md font-bold text-xs bg-transparent items-center text-white justify-center'>
+            <button onClick={() => router.back()} className=' flex  rounded-md font-bold text-xs bg-transparent items-center text-white justify-center'>
               <Image src={ArrowLeft} alt='Arrow left icon' />
-            </Link>
+            </button>
           </div>
           <div className='flex justify-end mb-4'>
             <span className='px-2 py-1 flex  rounded-md font-bold text-xs bg-[#15803d] items-center text-white justify-center'>
@@ -203,12 +205,12 @@ export const BeerDetail = (
 
   if (avg === "BOA") {
     return (
-      <main className='flex flex-col items-center w-screen  justify-center'>
+      <main className='flex flex-col my-20  items-center w-screen  justify-center'>
         <div className=" bg-white  flex flex-col w-full mr-4  rounded-lg p-4 max-w-sm ">
           <div className='flex justify-start '>
-            <Link href='/dashboard' className=' flex  rounded-md font-bold text-xs bg-transparent items-center text-white justify-center'>
+            <button onClick={() => router.back()} className=' flex  rounded-md font-bold text-xs bg-transparent items-center text-white justify-center'>
               <Image src={ArrowLeft} alt='Arrow left icon' />
-            </Link>
+            </button>
           </div>
           <div className='flex justify-end mb-4'>
             <span className='px-2 py-1 flex  rounded-md font-bold text-xs bg-[#f59e0b] items-center text-white justify-center'>
@@ -319,12 +321,12 @@ export const BeerDetail = (
 
 
   return (
-    <main className='flex flex-col items-center w-screen  justify-center'>
+    <main className='flex flex-col my-20  items-center w-screen  justify-center'>
       <div className=" bg-white  flex flex-col w-full mr-4  rounded-lg p-4 max-w-sm ">
         <div className='flex justify-start '>
-          <Link href='/dashboard' className=' flex  rounded-md font-bold text-xs bg-transparent items-center text-white justify-center'>
+          <button onClick={() => router.back()} className=' flex  rounded-md font-bold text-xs bg-transparent items-center text-white justify-center'>
             <Image src={ArrowLeft} alt='Arrow left icon' />
-          </Link>
+          </button>
         </div>
         <div className='flex justify-end mb-4'>
           <span className='px-2 py-1 flex  rounded-md font-bold text-xs bg-[#dc2626] items-center text-white justify-center'>

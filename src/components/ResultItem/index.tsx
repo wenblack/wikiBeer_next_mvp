@@ -115,7 +115,7 @@ export const ResultItem = (
         <div className="mt-2">
           <span className='flex items-center justify-between'>
             <h3 className=" text-gray capitalize font-semibold">
-              {name.substring(0, 13)} {name.length > 13 ? '...' : ''}
+              {name}
             </h3>
           </span>
           <span className=" px-2 py-1 bg-button text-white font-semibold text-xs rounded-md">
